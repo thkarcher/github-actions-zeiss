@@ -1,5 +1,12 @@
 name: Reuse other workflow
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      who-to-greet:
+        description: 'The person to greet'
+        type: string
+        required: true
+        default: MyReusingWorld
 
 jobs:
   call-workflow:
