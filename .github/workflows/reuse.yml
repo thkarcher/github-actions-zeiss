@@ -12,7 +12,7 @@ jobs:
   call-workflow:
     uses: ./.github/workflows/reusable.yml
     with:
-      who-to-greet: '@meMEMEEE!'
+      who-to-greet: ${{ github.event.inputs.who-to-greet }} 
 
   use-output:
     runs-on: ubuntu-latest
