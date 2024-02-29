@@ -9,7 +9,8 @@ on:
         required: true
         default: World
     outputs:
-      current-time: ${{ jobs.reusable-job.outputs.current-time }}
+      current-time:
+        value: ${{ jobs.reusable-job.outputs.current-time }}
 
 jobs:
   reusable-job:
